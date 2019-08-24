@@ -11,7 +11,7 @@ def welcome(request):
 def photos_of_day(request):
     date = dt.date.today()
     date = dt.date.today()
-    return render(request, 'all-news/today_photos.html', {"date": date,})
+    return render(request, 'all/today_photos.html', {"date": date,})
 
 
     
@@ -28,4 +28,4 @@ def past_days_photos(request,past_date):
     if date == dt.date.today():
         return redirect(news_of_day)
 
-    return render(request, 'all-news/past_photos.html', {"date": date})
+    return render(request, 'all/past_photos.html', {"date": date})
