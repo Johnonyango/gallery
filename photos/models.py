@@ -16,11 +16,15 @@ class tags(models.Model):
         return self.name
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/', default='DEFAULT VALUE')
     name = models.CharField(max_length =60)
     description = models.TextField()
     # location = models.ForeignKey(Location)
     # category = models.ForeignKey(Category)
     tags = models.ManyToManyField(tags)
+    postor = models.ForeignKey(Postor,on_delete=models.DO_NOTHING)
+    post_date = models.DateTimeField(auto_now_add=True)
+
+
 
     
