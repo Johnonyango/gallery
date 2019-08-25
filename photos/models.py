@@ -33,7 +33,7 @@ class Image(models.Model):
     post_date = models.DateTimeField(auto_now_add=True)
     
     @classmethod
-    def todays_photos(cls):
+    def photos_of_day(cls):
         today = dt.date.today()
         photos = cls.objects.filter(post_date__date = today)
         return photos
