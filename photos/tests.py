@@ -18,3 +18,34 @@ class PostorTestClass(TestCase):
         self.john.save_postor()
         postors = Postor.objects.all()
         self.assertTrue(len(postors) > 0)
+
+
+class ImageTestClass(TestCase):
+    def setUp(self):
+        # Creating a new postor and saving it
+        self.james= Editor(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james.save_editor()
+
+        # Creating a new tag and saving it
+        self.new_location = location(name = 'testing')
+        self.new_tag.save()
+
+        self.new_image= Image(title = 'Test Image',post = 'This is a random test Post',postor = self.james)
+        self.new_image.save()
+
+        self.new_image.location.add(self.new_tag)
+
+    def tearDown(self):
+        Postor.objects.all().delete()
+        location.objects.all().delete()
+        image.objects.all().delete()
+
+    def test_get_photos_today(self):
+        today_photos = Article.todays_photos()
+        self.assertTrue(len(today_photos)>0)
+
+    def test_get_photos_by_date(self):
+        test_date = '2017-03-17'
+        date = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
+        photos_by_date = Article.days_photos(date)
+        self.assertTrue(len(photos_by_date) == 0)

@@ -16,18 +16,32 @@ class Postor(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length =30)
-
+    
 
     def __str__(self):
         return self.name
+
+class Category(models.Model):
+    category_name = models.CharField(max_length =30)
+
 
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'images/', default='DEFAULT VALUE')
     name = models.CharField(max_length =60)
     description = models.TextField()
-    postor = models.ForeignKey(Postor, on_delete='SOME STRING')
+    postor = models.ForeignKey(Postor, on_delete=models.DO_NOTHING)
     post_date = models.DateTimeField(auto_now_add=True)
     
+    @classmethod
+    def todays_photos(cls):
+        today = dt.date.today()
+        photos = cls.objects.filter(post_date__date = today)
+        return photos
+    
+    @classmethod
+    def days_photos(cls,date):
+        news = cls.objects.filter(pub_date__date = date)
+        return photos
 
     
 
