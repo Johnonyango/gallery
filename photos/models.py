@@ -7,6 +7,8 @@ class Postor(models.Model):
     last_name = models.CharField(max_length =30)
     email = models.EmailField()
     phone_number = models.CharField(max_length = 10,blank =True)
+    location = models.ManyToManyField(tags)
+
 
 
     def __str__(self):
