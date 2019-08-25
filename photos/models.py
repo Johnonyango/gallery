@@ -1,4 +1,5 @@
 from django.db import models
+import datetime as dt
 
 # Create your models here.
 class Postor(models.Model):
@@ -16,15 +17,10 @@ class tags(models.Model):
         return self.name
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='images/', default='DEFAULT VALUE')
     name = models.CharField(max_length =60)
     description = models.TextField()
-    # location = models.ForeignKey(Location)
-    # category = models.ForeignKey(Category)
+    postor = models.ForeignKey(Postor, on_delete='SOME STRING')
     tags = models.ManyToManyField(tags)
-    postor = models.ForeignKey(Postor,on_delete=models.DO_NOTHING)
     post_date = models.DateTimeField(auto_now_add=True)
-
-
 
     
