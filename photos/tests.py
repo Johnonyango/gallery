@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Postor,Image,Tags
+from .models import Postor,Image,Location
 
 
 # Create your tests here.
@@ -11,7 +11,7 @@ class PostorTestClass(TestCase):
     
     # Testing  instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.james,Postor))
+        self.assertTrue(isinstance(self.john,Postor))
 
     # Testing Save Method
     def test_save_method(self):

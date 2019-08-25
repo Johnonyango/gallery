@@ -7,7 +7,7 @@ class Postor(models.Model):
     last_name = models.CharField(max_length =30)
     email = models.EmailField()
     phone_number = models.CharField(max_length = 10,blank =True)
-    location = models.ManyToManyField(tags)
+    # location = models.ManyToManyField(location)
 
 
 
@@ -22,10 +22,12 @@ class Location(models.Model):
         return self.name
 
 class Image(models.Model):
+    photo = models.ImageField(upload_to = 'images/', default='DEFAULT VALUE')
     name = models.CharField(max_length =60)
     description = models.TextField()
     postor = models.ForeignKey(Postor, on_delete='SOME STRING')
     post_date = models.DateTimeField(auto_now_add=True)
+    
 
     
 
