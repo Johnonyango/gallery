@@ -21,5 +21,6 @@ class Image(models.Model):
     description = models.TextField()
     # location = models.ForeignKey(Location)
     # category = models.ForeignKey(Category)
-    
+    tags = models.ManyToManyField(tags)
+
     
