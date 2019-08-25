@@ -12,8 +12,9 @@ class Postor(models.Model):
     def __str__(self):
         return self.first_name
 
-class tags(models.Model):
+class Location(models.Model):
     name = models.CharField(max_length =30)
+
 
     def __str__(self):
         return self.name
@@ -22,7 +23,8 @@ class Image(models.Model):
     name = models.CharField(max_length =60)
     description = models.TextField()
     postor = models.ForeignKey(Postor, on_delete='SOME STRING')
-    tags = models.ManyToManyField(tags)
     post_date = models.DateTimeField(auto_now_add=True)
+
+    
 
     
