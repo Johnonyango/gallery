@@ -5,3 +5,25 @@ body{
 h1{
     color:green;
 }
+.img-holder img {
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.img-holder {
+    padding:10px;
+    overflow: hidden;
+    box-shadow: 2px 4px 12px 2px #dcdcdc;
+}
+.img-holder:hover img {
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 1;
+}
