@@ -54,7 +54,6 @@ class Category(models.Model):
         category.save()
 
     
-
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'images/', default='DEFAULT VALUE')
     title = models.CharField(max_length =60)
