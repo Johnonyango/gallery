@@ -16,9 +16,17 @@
 
   {% if images %}
     {% for image in images %}
-      <div class="col-sm-6 col-md-3">
+    <div class="col-md-4 img-responsive thumbnail">
+        <div class="image-details">
+          
+            <h2 class="text-center"> {{ photos_item.title }} </h2>
+
+          </div>
+        <img src="{{image.photo.url}}" class="img-responsive" alt="Image" style="height: 300px;">
+      
+        <!-- <div class="col-sm-6 col-md-3">
           <img src="{{image.photo.url}}" class="img-responsive" alt="Image">
-        </div>
+        </div> -->
     {% endfor %}
   {% endif %}
   </div>
