@@ -23,8 +23,8 @@ class PostorTestClass(TestCase):
 class ImageTestClass(TestCase):
     def setUp(self):
         # Creating a new postor and saving it
-        self.james= Editor(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
-        self.james.save_editor()
+        self.james= Postor(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james.save_postor()
 
         # Creating a new tag and saving it
         self.new_location = location(name = 'testing')
@@ -41,11 +41,11 @@ class ImageTestClass(TestCase):
         image.objects.all().delete()
 
     def test_get_photos_today(self):
-        today_photos = Article.todays_photos()
+        today_photos = Image.todays_photos()
         self.assertTrue(len(today_photos)>0)
 
     def test_get_photos_by_date(self):
         test_date = '2017-03-17'
         date = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
-        photos_by_date = Article.days_photos(date)
+        photos_by_date = Image.days_photos(date)
         self.assertTrue(len(photos_by_date) == 0)
