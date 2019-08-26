@@ -15,7 +15,7 @@ class Postor(models.Model):
         return self.first_name
 
 class Location(models.Model):
-    name = models.CharField(max_length =30)
+    category = models.CharField(max_length =30)
     
 
     def __str__(self):
@@ -32,6 +32,8 @@ class Image(models.Model):
     description = models.TextField()
     postor = models.ForeignKey(Postor, on_delete=models.DO_NOTHING)
     post_date = models.DateTimeField(auto_now_add=True)
+    category = models.ManyToManyField(Category)
+
     
     @classmethod
     def photos_of_day(cls):
