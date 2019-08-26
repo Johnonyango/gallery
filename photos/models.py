@@ -43,6 +43,9 @@ class Image(models.Model):
         news = cls.objects.filter(pub_date__date = date)
         return photos
 
-    
+    @classmethod
+    def search_by_title(cls,search_term):
+        photos = cls.objects.filter(title__icontains=search_term)
+        return photos
 
     
