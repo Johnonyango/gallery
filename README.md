@@ -56,7 +56,7 @@ copy paste to your preffered browser
 * Password:12345
 
 ## Known Bugs 
-1. Images showing locally but on heroku app they come blank.
+1. Images showing locally but on heroku app they come blank. The team responsible for this app is working round t
 
 ## Technologies & Resources/Tools Used
 Technologies used include:
