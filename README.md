@@ -68,7 +68,7 @@ Technologies used include:
 * Git - for app details
 
 
-## Support and contact details
+## Contact for support:
 For more info or assistance(If there is a bug in my code), please contact:
 j.yayah7@gmail.com
 
