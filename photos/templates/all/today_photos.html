@@ -24,21 +24,6 @@
 </div>
   
 
-<script>
-    function copyLink(id) {
-      /* Get the text field */
-      var copyText = document.getElementById("img-responsive" + id);
-​
-      /* Select the text field */
-      copyText.select();
-​
-      /* Copy the text inside the text field */
-      document.execCommand("copy");
-​
-      /* Alert the copied text */
-      alert("Do you want to share this link?: " + copyText.value);
-    }
-  </script>
     {% empty %}
     <div class="row">
       <h2 class="text-center">There are No Photos yet</h2>
