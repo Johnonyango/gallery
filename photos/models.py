@@ -36,7 +36,7 @@ class Location(models.Model):
     
 
 class Category(models.Model):
-    category= models.CharField(max_length =30)
+    category_name = models.CharField(max_length =30)
 
     def __str__(self):
         return self.category_name
@@ -60,7 +60,7 @@ class Image(models.Model):
     description = models.TextField()
     postor = models.ForeignKey(Postor, on_delete=models.DO_NOTHING)
     post_date = models.DateTimeField(auto_now_add=True)
-    category= models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category)
     location_name = models.CharField(max_length =30, default='DEFAULT VALUE')
 
 
