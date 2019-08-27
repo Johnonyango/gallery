@@ -3,20 +3,19 @@
 
 
 ## Description
-[GALLERY](https://affluen.herokuapp.com/)application allows users to have a view of different photos based on location and category and search different photos they want.They can also copy link to that photo and view the photo on a window.
+[Gallery](https://affluen.herokuapp.com/)application allows users to have a view of different photos based on location and category and search different photos they want.They can also copy link to that photo and view the photo on a window.
 
 
 ## Setup/Installation Requirements
 1. Live site at https://affluen.herokuapp.com
 2. Copy  and  Paste the link on your prefered browser
-3. Clone [Gallery](https://github.com/Johnonyango/gallery)to get started and git clone the link in your terminal and open your preffered text editor.
-4. Install requirements e.g:
+3. Install requirements e.g:
 _*pip install django==2.2.4 -- to install django _*
 _*pip intsall django-bootstrap3._*
-5. Run the app on server by command python3.6 manage.py runserver.
-6. Click on any photo to copy a link od view its details i.e description and name.
-7. Tap the close button or icon to go back to the gallery.
-8. To view photos according on their location, tap on the drop down menu in the navbar.
+4. Run the app on server by command python3.6 manage.py runserver.
+5. Click on any photo to copy a link od view its details i.e description and name.
+6. Tap the close button or icon to go back to the gallery.
+7. To view photos according on their location, tap on the drop down menu in the navbar.
 
 ## Specifications
 1. Users can view different photos that interest  them.
@@ -26,8 +25,9 @@ _*pip intsall django-bootstrap3._*
 5. Users can view photos based on the location they were taken.
 
 ## To clone this Repo
-    Run the following command on the terminal: git clone https://github.com/Johnonyango/gallery
-    cd gallery
+1. Run the following command on the terminal: git clone https://github.com/Johnonyango/gallery 
+2. cd gallery
+3. Open with your preffered text editor
 
 ## Activate virtual environment
 Activate virtual environment using python3.6 as the default handler
@@ -35,8 +35,9 @@ Activate virtual environment using python3.6 as the default handler
 virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 
 ## Create the Database
-psql
-CREATE DATABASE gallery;
+1. Run psql command
+2. CREATE DATABASE gallery;
+3. \c gallery to connect to your database
 
 ##Run initial Migration
 python3.6 manage.py makemigrations photos
