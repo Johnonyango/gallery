@@ -1,12 +1,16 @@
 
 body{
-    background-color: brown;
+    background-color: rgb(42, 165, 138);
     overflow-x: hidden;
     
 }
 
 h1{
     color:green;
+}
+   h1,h2{ 
+       font-family: 'Lobster', cursive;
+
 }
 .img-responsive img {
     width: 100%;
