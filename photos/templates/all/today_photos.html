@@ -15,15 +15,15 @@
         </div>
       <img src="{{photos_item.photo.url}}" class="img-responsive" alt="Image" style="height: 300px;">
   </div>
-    <div class="row">
-      <!-- displaying photos -->
-      <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <h2 class="text-center"> {{ photos_item.title }} </h2>
-        <img src="{{photos_item.photo.url}}" class="img-responsive" alt="Image">
+      
+  <div class="img-responsive"> 
+    <a onclick="copyLink{{photo.id}}"><button type="button"
+    class="btn btn-outline-warning my-2 my-sm-0 link-btn">Copy image Link</button></a>
+<input class="form-control" type="text" value="http://127.0.0.1:8000{{photos_item.photo.url}}"
+  id="thislinkhere-{{photo.id}}" style="width:50%;">
 
-      </div>
-  
-    </div> -->
+
+  </div>
   
     {% empty %}
     <div class="row">
