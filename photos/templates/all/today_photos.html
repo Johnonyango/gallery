@@ -17,14 +17,28 @@
   </div>
       
   <div class="img-responsive"> 
-    <a onclick="copyLink{{photo.id}}"><button type="button"
-    class="btn btn-outline-warning my-2 my-sm-0 link-btn">Copy image Link</button></a>
+    <a onclick="copyLink({{photo.id}})"><button type="button"
+    class="btn btn-outline-warning my-2 my-sm-0 link-btn">Copy picture Link</button></a>
 <input class="form-control" type="text" value="http://127.0.0.1:8000{{photos_item.photo.url}}"
   id="thislinkhere-{{photo.id}}" style="width:50%;">
-
-
-  </div>
+</div>
   
+
+<script>
+    function copyLink(id) {
+      /* Get the text field */
+      var copyText = document.getElementById("img-responsive" + id);
+​
+      /* Select the text field */
+      copyText.select();
+​
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+​
+      /* Alert the copied text */
+      alert("Do you want to share this link?: " + copyText.value);
+    }
+  </script>
     {% empty %}
     <div class="row">
       <h2 class="text-center">There are No Photos yet</h2>
