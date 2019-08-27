@@ -3,7 +3,7 @@
 
 
 ## Description
-[Gallery](https://affluen.herokuapp.com/)application allows users to have a view of different photos based on location and category and search different photos they want.They can also copy link to that photo and view the photo on a window.
+[Gallery](https://affluen.herokuapp.com/)application allows users to have a view of different photos based on the title of the photo, location and category. They can also copy link to that photo and view the photo on a window.
 
 
 ## Setup/Installation Requirements
@@ -56,7 +56,8 @@ copy paste to your preffered browser
 * Password:12345
 
 ## Known Bugs 
-1. Images showing locally but on heroku app they come blank. The team responsible for this app is working round t
+1. Images showing locally but on heroku app they come blank. The team responsible for this app is working round the clock to coorect the error.
+2. So far a user can search by tittle as the category and location has so small bugs, agan the team is working to correct that as soon as posible.
 
 ## Technologies & Resources/Tools Used
 Technologies used include:
